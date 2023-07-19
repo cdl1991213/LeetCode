@@ -1,2 +1,2 @@
-# leetcode
-my leetcode record
+# LeetCode
+记录我的LeetCode题解
