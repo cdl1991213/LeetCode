@@ -1,5 +1,5 @@
 // 希尔排序
-function HillSort(arr){
+export function HillSort(arr){
     const n = arr.length
     // 确定增量
     let increment = Math.floor(n / 2)
@@ -18,6 +18,8 @@ function HillSort(arr){
             for(let j=i; j>=increment; j-=increment){
                 if(arr[j-increment] > arr[j]){
                     swap(arr, j, j-increment)
+                }else{
+                    break
                 }
             }
         }
@@ -36,6 +38,6 @@ function swap(arr, index1, index2){
 }
 
 // 示例用法
-const unsortedArray = [64, 34, 25, 12, 22, 11, 90];
-const sortedArray = HillSort(unsortedArray);
-console.log(sortedArray); // 输出 [11, 12, 22, 25, 34, 64, 90]
+// const unsortedArray = [64, 34, 25, 12, 22, 11, 90];
+// const sortedArray = HillSort(unsortedArray);
+// console.log(sortedArray); // 输出 [11, 12, 22, 25, 34, 64, 90]

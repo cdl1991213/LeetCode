@@ -87,7 +87,7 @@
 // }
 
 // 最终版
-function BubblingSort(arr){
+export function BubblingSort(arr){
     const n = arr.length
     // 记录内层循环的上限值
     let thresholdIndex = n-1
@@ -129,6 +129,6 @@ function swap(arr, index1, index2){
 }
 
 // 示例用法
-const unsortedArray = [64, 34, 25, 12, 22, 11, 90];
-const sortedArray = BubblingSort(unsortedArray);
-console.log(sortedArray); // 输出 [11, 12, 22, 25, 34, 64, 90]
+// const unsortedArray = [64, 34, 25, 12, 22, 11, 90];
+// const sortedArray = BubblingSort(unsortedArray);
+// console.log(sortedArray); // 输出 [11, 12, 22, 25, 34, 64, 90]

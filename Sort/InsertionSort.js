@@ -15,7 +15,7 @@
 // }
 
 // 内层循环优化
-function InsertionSort(arr){
+export function InsertionSort(arr){
     const n = arr.length
 
     // 1 ~ N-1
@@ -42,6 +42,6 @@ function swap(arr, index1, index2){
 }
 
 // 示例用法
-const unsortedArray = [64, 34, 25, 12, 22, 11, 90];
-const sortedArray = InsertionSort(unsortedArray);
-console.log(sortedArray); // 输出 [11, 12, 22, 25, 34, 64, 90]
+// const unsortedArray = [64, 34, 25, 12, 22, 11, 90];
+// const sortedArray = InsertionSort(unsortedArray);
+// console.log(sortedArray); // 输出 [11, 12, 22, 25, 34, 64, 90]

@@ -124,6 +124,6 @@ function BinarySearch(arr){
 }
 
 // 示例用法
-const unsortedArray = [9, 6, 3, 4, 5, 7, 8];
-const localMinimumIndex = BinarySearch(unsortedArray);
-console.log(localMinimumIndex); // 输出 2 (对应元素为 3)
+// const unsortedArray = [9, 6, 3, 4, 5, 7, 8];
+// const localMinimumIndex = BinarySearch(unsortedArray);
+// console.log(localMinimumIndex); // 输出 2 (对应元素为 3)

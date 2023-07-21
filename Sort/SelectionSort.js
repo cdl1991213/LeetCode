@@ -1,5 +1,5 @@
 // 选择排序
-function SelectionSort(arr){
+export function SelectionSort(arr){
     const n = arr.length
 
     // 剪枝，即去除无效边界值
@@ -32,6 +32,6 @@ function swap(arr, index1, index2){
 }
 
 // 示例用法
-const unsortedArray = [64, 34, 25, 12, 22, 11, 90];
-const sortedArray = SelectionSort(unsortedArray);
-console.log(sortedArray); // 输出 [11, 12, 22, 25, 34, 64, 90]
+// const unsortedArray = [64, 34, 25, 12, 22, 11, 90];
+// const sortedArray = SelectionSort(unsortedArray);
+// console.log(sortedArray); // 输出 [11, 12, 22, 25, 34, 64, 90]
