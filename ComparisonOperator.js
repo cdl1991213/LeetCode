@@ -1,10 +1,10 @@
-// 对数器（排序算法）
+// 对数器（输入为数组，原地改变数组）
 /* 
     testTime 测试次数
     maxSize 数组最大长度
     maxValue 数组元素最大值
 */
-export function ComparisionOperatorForSort(TestMethod, templateMethod = defaultTemplateMethod, testTime = 50000, maxSize = 100, maxValue = 100){
+export function ComparisionOperatorWithInputArrayChangeArrayInPlace(TestMethod, templateMethod = defaultTemplateMethod, testTime = 50000, maxSize = 100, maxValue = 100){
     
     // TestMethod是否通过测试
     let succeed = true
@@ -32,12 +32,48 @@ export function ComparisionOperatorForSort(TestMethod, templateMethod = defaultT
     console.log(succeed ? "Accept!" : "Fucking fucked!")
 }
 
+// 对数器（输入为数组，输出为数值）
+/* 
+    testTime 测试次数
+    maxSize 数组最大长度
+    maxValue 数组元素最大值
+*/
+export function ComparisionOperatorWithInputArrayOutputNum(TestMethod, templateMethod, testTime = 50000, maxSize = 100, maxValue = 100){
+    
+    // TestMethod是否通过测试
+    let succeed = true
+
+    for(let i=0; i<testTime; i++){
+        // 生成一个随机数组
+        let arr1 = generateRandomArray(maxSize, maxValue)
+        // copy
+        let arr2 = [...arr1]
+
+        let res1 = TestMethod(arr1)
+        let res2 = templateMethod(arr2)
+
+        // 判断运行结果是否相同
+        if(res1 != res2){
+            // 打印输入数组
+            // console.log("InputArr:", arr1)
+            // 打印运行结果
+            console.log('TestMethodResult:', res1)
+            console.log('templateMethodResult:', res2)
+            succeed = false
+            break
+        }
+    }
+
+    // 打印测试结果
+    console.log(succeed ? "Accept!" : "Fucking fucked!")
+}
+
 // 使用随机数组测试TestMethod
 /* 
     maxSize 数组最大长度
     maxValue 数组元素最大值
 */
-export function randomTestForSort(TestMethod, maxSize = 100, maxValue = 100){
+export function randomTestWithInputArray(TestMethod, maxSize = 100, maxValue = 100){
     let arr = generateRandomArray(maxSize, maxValue)
     console.log("arr before sort:", arr)
     TestMethod(arr)
