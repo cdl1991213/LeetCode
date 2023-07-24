@@ -15,6 +15,9 @@ export function ComparisionOperatorWithInputArrayChangeArrayInPlace(TestMethod, 
         // copy
         let arr2 = [...arr1]
 
+        // 打印输入数组, 测试时可以松开注释
+        // console.log("InputArr:",arr1)
+
         TestMethod(arr1)
         templateMethod(arr2)
 

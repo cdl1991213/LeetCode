@@ -3,11 +3,12 @@ import { BubblingSort } from "./Sort/BubblingSort.js";
 import { InsertionSort } from "./Sort/InsertionSort.js";
 import { SelectionSort } from "./Sort/SelectionSort.js";
 import { MergeSort, reverseSequencePairByViolence, reverseSequencePairByMergeSort } from "./Sort/MergeSort.js";
+import { QuickSort } from "./Sort/QuickSort.js";
 
 import { ComparisionOperatorWithInputArrayChangeArrayInPlace, ComparisionOperatorWithInputArrayOutputNum, randomTestWithInputArray } from "./ComparisonOperator.js";
 
-// ComparisionOperatorWithInputArrayChangeArrayInPlace(MergeSort)
+ComparisionOperatorWithInputArrayChangeArrayInPlace(QuickSort)
 
 // randomTestWithInputArray(MergeSort)
 
-ComparisionOperatorWithInputArrayOutputNum(reverseSequencePairByMergeSort, reverseSequencePairByViolence, 1, 7, 10)
+// ComparisionOperatorWithInputArrayOutputNum(reverseSequencePairByMergeSort, reverseSequencePairByViolence)
