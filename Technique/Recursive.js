@@ -20,7 +20,7 @@ function Recursive(arr, L, R){
     return Math.max(leftMax, rightMax)
 }
 
-// 测试
+// 示例用法
 // const arr = [3, 9, 1, 7, 2, 8, 5];
 // const maxInRange = Recursive(arr, 0, arr.length - 1);
 // console.log("最大值为:", maxInRange); // 输出: 最大值为: 9

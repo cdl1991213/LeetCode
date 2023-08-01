@@ -1,4 +1,6 @@
 // 插入排序
+
+/* 简单版 */
 // function InsertionSort(arr){
 //     const n = arr.length
 
@@ -14,7 +16,7 @@
 //     return arr
 // }
 
-// 内层循环优化
+/* 内层循环优化 */
 export function InsertionSort(arr){
     const n = arr.length
 

@@ -1,4 +1,5 @@
 // 快速排序
+
 export function QuickSort(arr){
     const n = arr.length
 
@@ -62,10 +63,6 @@ export function QuickSort(arr){
 
     return arr
 }
-
-
-
-
 
 /* 
     荷兰国旗问题1

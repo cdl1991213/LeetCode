@@ -1,4 +1,5 @@
 // 归并排序
+
 export function MergeSort(arr){
     const n = arr.length
 
@@ -67,16 +68,14 @@ export function MergeSort(arr){
     }
 }
 
-
-
 // 示例用法
 // const unsortedArray = [38, 27, 43, 3, 9, 82, 10];
 // const sortedArray = MergeSort(unsortedArray);
 // console.log(sortedArray); // 输出 [3, 9, 10, 27, 38, 43, 82]
 
 /* 
-小和问题
-在一个数组中，每一个数左边比当前数小的数累加起来，叫做这个数组的小和。求一个数组的小和
+    小和问题
+    在一个数组中，每一个数左边比当前数小的数累加起来，叫做这个数组的小和。求一个数组的小和
 */
 // 1. 暴力遍历
 export function minSumByViolence(arr){
@@ -179,9 +178,6 @@ export function minSumByMergeSort(arr){
 
 }
 
-
-
-
 // 示例用法
 // const unsortedArray = [1,3,4,2,5];
 // const minSum = minSumByMergeSort(unsortedArray);
@@ -215,7 +211,7 @@ export function reverseSequencePairByMergeSort(arr){
 
     // 剪枝
     if(arr == null || arr.length < 2){
-        return arr
+        return 0
     }
 
     return LocalRecursiveFunction(arr)
@@ -256,7 +252,7 @@ export function reverseSequencePairByMergeSort(arr){
                 lp+=1
             }else{
                 // 累加逆序列数量
-                ReverseOrderPairQuantity += M - lp + 1
+                ReverseOrderPairQuantity += rp - M + 1
 
                 assistArr[p] = arr[rp]
                 p+=1

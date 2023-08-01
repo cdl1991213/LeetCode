@@ -1,4 +1,6 @@
 // 冒泡排序
+
+/* 简单版 */
 // function BubblingSort(arr){
 //     const n = arr.length
 
@@ -21,7 +23,7 @@
 //     return arr
 // }
 
-// 优化外层循环
+/* 优化外层循环 */
 // function BubblingSort(arr){
 //     const n = arr.length
 
@@ -51,7 +53,7 @@
 //     return arr
 // }
 
-// 优化内层循环
+/* 优化内层循环 */
 // function BubblingSort(arr){
 //     const n = arr.length
 //     // 记录内层循环的上限值
@@ -85,7 +87,7 @@
 //     return arr
 // }
 
-// 最终版
+/* 最终版 */
 export function BubblingSort(arr){
     const n = arr.length
     // 记录内层循环的上限值
