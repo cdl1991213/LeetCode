@@ -7,16 +7,13 @@ export function QuickSort(arr){
         return arr
     }
 
-    // 等概率随机选择位置作为基准位置, 使快排的平均时间复杂度保持在O(N·logN)水平
-    Swap(arr, L, L + Math.floor( Math.random() * (R-L+1) ))
-
     LocalRecursiveFunction(arr)
 
     // 局部递归函数体
     function LocalRecursiveFunction(arr, L=0, R=n-1){
-        // 当子数组长度为0、1为递归最小单位，默认有序
-        // 长度为0时，L>R; 长度为1时，L==R
-        if(L >= R){
+        // 当子数组长度为1为递归最小单位，默认有序
+        // 长度为1时，L==R
+        if(L == R){
             return
         }
 
@@ -24,28 +21,28 @@ export function QuickSort(arr){
         let [lp, rp] = Partition(arr, L, R)
         
         // 对小于区、大于区分别递归进行快速排序
-        if(lp > 0){
-            LocalRecursiveFunction(arr, L, lp-1)
+        if(lp >= L){
+            LocalRecursiveFunction(arr, L, lp)
         }
-        if(rp < n-1){
-            LocalRecursiveFunction(arr, rp+1, R)
+        if(rp <= R){
+            LocalRecursiveFunction(arr, rp, R)
         }
     }
 
     // 划分小于区、大于区
     function Partition(arr, L, R){
         // 小于区、大于区指针
-        let lp = L, rp = R
+        let lp = L-1, rp = R+1
+        // 等概率随机选择位置作为基准位置, 使快排的平均时间复杂度保持在O(N·logN)水平
+        Swap(arr, L, L + Math.floor( Math.random() * (R-L+1) ))
         // 确认基准值(分区的第一位)
         let baseValue = arr[L]
 
-        for(let i=L+1; i<=rp; i++){
+        for(let i=L+1; i<rp; i++){
             if(arr[i] < baseValue){
-                Swap(arr, i, lp)
-                lp++
+                Swap(arr, i, ++lp)
             }else if(arr[i] > baseValue){
-                Swap(arr, i, rp)
-                rp--
+                Swap(arr, i, --rp)
                 i--
             }else{
                 // pass
@@ -167,6 +164,10 @@ function FlagTheNetherlands2WithChangeInplace(arr, targetNum){
 }
 
 // 示例用法
-// const unsortedArray = [5, 2, 9, 1, 5, 6];
-// const sortedArray = QuickSort(unsortedArray);
-// console.log(sortedArray); // 输出 [1, 2, 5, 5, 6, 9]
+const unsortedArray = [5, 2, 9, 1, 5, 6];
+const sortedArray = QuickSort(unsortedArray);
+console.log(sortedArray); // 输出 [1, 2, 5, 5, 6, 9]
+
+// 对数器
+import { ComparisionOperator1 } from "../ComparisonOperator.js"
+ComparisionOperator1(QuickSort)

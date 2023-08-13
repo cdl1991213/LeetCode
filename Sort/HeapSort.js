@@ -14,6 +14,7 @@ export function HeapSort(arr){
     //     HeapInsert(arr, i)
     // }
     // 数组全部插入，从上往下调整，将数组构造为大根堆
+    // !!!!!!!使用这种写法 时间和空间都明显下降, 数据量越大,效果越明显!!!!!!!
     for(let i=n-1; i>=0; i--){
         Heapify(arr, i, n)
     }

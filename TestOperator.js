@@ -23,7 +23,8 @@ maxValue 数组元素最大值
 export function TestOperator2(TestMethod, maxSize = 100, maxValue = 100){
     console.log("测试器开始......")
     let arr = generateRandomArray(maxSize, maxValue)
-    let num = arr[generateRandomNum(0, arr.length - 1)]
+    // 在此处修改输入的Num
+    let num = generateRandomNum(0, arr.length - 1)
     console.log("Input Arr:", arr)
     console.log("Input Num:", num)
     let res = TestMethod(arr, num)
