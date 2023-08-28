@@ -38,7 +38,7 @@ Object.ObjectAssign = (target, ...sources) => {
                 // 获取属性描述
                 let desc = Object.getOwnPropertyDescriptor(sourceObj, property)
                 if(desc != undefined && desc.enumerable){
-                    // <显然这里是浅拷贝，复制了对象属性的引用地址>
+                    // 显然这里是浅拷贝，复制了对象属性的引用地址
                     targetObj[property] = sourceObj[property]
                 }
             }

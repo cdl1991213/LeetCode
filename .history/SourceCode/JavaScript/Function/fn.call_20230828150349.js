@@ -17,7 +17,6 @@ Function.prototype.fnCall = function (thisObj, ...args) {
     let res = thisObj.fn(...args)
 
     delete thisObj.fn
-    return res
 };
 
 

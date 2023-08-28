@@ -1,4 +1,4 @@
-/* Object.create(proto, [properties]) */
+/* Object.create */
 /* 
     使用现有对象来作为新创建对象的proto
     1. 新建一个空对象
